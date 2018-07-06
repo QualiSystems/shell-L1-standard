@@ -28,7 +28,7 @@ To debug the driver use the [DEBUGGING GUIDE](https://github.com/QualiSystems/sh
 2. After validating the auto load, you can validate the mapping functions either from Resource Manager or in the CloudShell Portal, [build a blueprint](http://help.quali.com/Online%20Help/8.3/Portal/Content/CSP/LAB-MNG/Rsc-Cnct/Phys-Ntwrk-Crt.htm) with 2 resources and a route, then reserve this blueprint and connect the route.
 
 
-**Build the driver package:**
+**Build the driver's package:**
 
 * In the driver's folder run command *build_driver*. It will create a zip package *dist\cloudshell-L1-DriverName-1.0.1.zip*
     
@@ -37,8 +37,8 @@ To debug the driver use the [DEBUGGING GUIDE](https://github.com/QualiSystems/sh
 ```
  
     
-**Install the driver package:**
-* Extract the driver package to the Drivers folder *C:\\Program Files (x86)\\QualiSystems\\CloudShell\\Server\\Drivers*
+**Install the driver's package:**
+* Extract the driver's package to the Drivers folder *C:\\Program Files (x86)\\QualiSystems\\CloudShell\\Server\\Drivers*
 * In the driver's folder *C:\\Program Files (x86)\\QualiSystems\\CloudShell\\Server\\Drivers\\cloudshell-L1-DriverName* run *install_driver.bat*
 ```bash
     install_driver.bat
