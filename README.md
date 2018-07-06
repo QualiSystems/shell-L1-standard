@@ -29,7 +29,6 @@ To debug the driver use the [DEBUGGING GUIDE](https://github.com/QualiSystems/sh
 
 
 **Build the driver package:**
-
     * In the drivers folder run command *build_driver*
     
     ```bash
@@ -38,7 +37,6 @@ To debug the driver use the [DEBUGGING GUIDE](https://github.com/QualiSystems/sh
     It will create a zip package *dist\cloudshell-L1-DriverName-1.0.1.zip*
     
 **Install the driver package:**
-
     * Extract the driver package to the Drivers folder *C:\\Program Files (x86)\\QualiSystems\\CloudShell\\Server\\Drivers*
     * In the driver's folder run *install_driver.bat*
     ```bash
