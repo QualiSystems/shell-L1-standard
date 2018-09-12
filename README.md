@@ -84,7 +84,7 @@ Do the following in Resource Manager Client.
 
 Once you’ve finished implementing and testing the shell, it’s time to create the shell package and install it in your CloudShell production environment. Note that you can skip this stage altogether if you developed your shell in the production environment.
 
-1. From the *\Drivers* folder, run the following command:
+1. From the shell's root folder, run the following command:
     
     `Scripts\build_driver.exe`
 
@@ -92,8 +92,8 @@ Once you’ve finished implementing and testing the shell, it’s time to create
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For example: *dist\cloudshell-L1-DriverName-1.0.1.zip*
 
-2. Extract the driver's package to the *\Drivers* folder *C:\\Program Files (x86)\\QualiSystems\\CloudShell\\Server\\Drivers*
-3. Navigate to the extracted folder and install the driver, as explained in [Creating a new driver and installing the driver's environment](#CreateNewDriver)
-4. Follow the steps in [Testing the driver in CloudShell](#TestNewDriver) to install the driver on CloudShell.
+2. Extract the shell package to the *\Drivers* folder *C:\\Program Files (x86)\\QualiSystems\\CloudShell\\Server\\Drivers*
+3. Navigate to the extracted folder and install the shell, as explained in [Creating a new driver and installing the driver's environment](#CreateNewDriver)
+4. Follow the steps in [Testing the driver in CloudShell](#TestNewDriver) to install the shell on CloudShell.
 
 
