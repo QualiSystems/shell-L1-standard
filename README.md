@@ -92,8 +92,9 @@ Once you’ve finished implementing and testing the shell, it’s time to create
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For example: *dist\cloudshell-L1-DriverName-1.0.1.zip*
 
-2. Extract the shell package to the *\Drivers* folder *C:\\Program Files (x86)\\QualiSystems\\CloudShell\\Server\\Drivers*
-3. Navigate to the extracted folder and install the shell, as explained in [Creating a new driver and installing the driver's environment](#CreateNewDriver)
+2. In the *dist* folder, extract the shell package.
+3. Open the extracted folder and copy the shell folder to the *\Drivers* folder at *C:\\Program Files (x86)\\QualiSystems\\CloudShell\\Server\\Drivers*.
+4. Install the shell, as explained in [Creating a new driver and installing the driver's environment](#CreateNewDriver).
 4. Follow the steps in [Testing the driver in CloudShell](#TestNewDriver) to install the shell on CloudShell.
 
 
