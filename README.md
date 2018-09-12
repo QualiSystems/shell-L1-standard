@@ -19,7 +19,7 @@ In this guide:
 
 2. To install the shell's environment and dependencies defined in the shell's *requirements.txt* file, in command-line, navigate to the *~\QualiSystems\CloudShell\Server* folder and run the appropriate command:
  
-    * If you're using Quali's default python interpreter (at *~\QualiSystems\CloudShell\Server\python*), run the following:
+    * If you're using Quali's default python interpreter, which resides at *~\QualiSystems\CloudShell\Server\python*, run the following:
 
         `install_driver.bat`
 
