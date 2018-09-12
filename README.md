@@ -80,7 +80,7 @@ Do the following in Resource Manager Client.
 4. After validating Autoload, you can validate the mapping functions either in Resource Manager Client (in the L1 resource's **Settings>Mappings** page, or in CloudShell Portal, by <a href="http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Rsc-Cnct/Phys-Ntwrk-Crt.htm" target="_blank">creating a blueprint</a> with 2 resources and a route, then reserving this blueprint and connecting the route.
 <a name="BuildInstallDriver"></a>
 
-### Building and installing the shell's package on CloudShell:**
+### Building and installing the shell's package on CloudShell
 
 Once you’ve finished implementing and testing the shell, it’s time to create the shell package and install it in your CloudShell production environment. Note that you can skip this stage altogether if you developed your shell in the production environment.
 
