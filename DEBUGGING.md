@@ -14,7 +14,7 @@ An easy way to get a CMD prompt as SYSTEM is to grab [PSEXEC](https://docs.micro
 ```cmd
      PSEXEC -i -s -d CMD
 ```
-You will have a new CMD prompt open, as SYSTEM.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You will have a new CMD prompt open, as SYSTEM.
 
 6. Run PyCharm in the opened CMD:
 ```cmd
