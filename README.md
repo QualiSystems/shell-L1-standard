@@ -11,7 +11,7 @@ In this guide:
 
 <a name="CreateNewDriver"></a>
 
-### Creating a new shell and installing the shell's environment
+## Creating a new shell and installing the shell's environment
 
 1. Start a new project with <a href="https://github.com/QualiSystems/shellfoundry" target="_blank">shellfoundry</a>. We recommend to do that in CloudShell's *Drivers* folder (usually at *C:\Program Files (x86)\QualiSystems\CloudShell\Server\Drivers* on the Quali Server machine):
 
@@ -48,7 +48,7 @@ stems\CloudShell\Server\Drivers\..\Logs""
 Listen address 0.0.0.0:4000
 ```
 
-### Implementing the shell in CloudShell
+## Implementing the shell in CloudShell
 
 Now that you have a new shell, it is time to implement the shell's commands. Note that at this point, the L1 shell includes the command structure but no working commands.
 
@@ -60,7 +60,7 @@ Now that you have a new shell, it is time to implement the shell's commands. Not
 2. Update the shell's version in the *version.txt* file.
 <a name="TestNewDriver"></a>
 
-### Testing the shell in CloudShell
+## Testing the shell in CloudShell
 
 Do the following in Resource Manager Client.
 
@@ -80,7 +80,7 @@ Do the following in Resource Manager Client.
 4. After validating Autoload, you can validate the mapping functions either in Resource Manager Client (in the L1 resource's **Settings>Mappings** page, or in CloudShell Portal, by <a href="http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Rsc-Cnct/Phys-Ntwrk-Crt.htm" target="_blank">creating a blueprint</a> with 2 resources and a route, then reserving this blueprint and connecting the route.
 <a name="BuildInstallDriver"></a>
 
-### Building and installing the shell's package on CloudShell
+## Building and installing the shell's package on CloudShell
 
 Once you’ve finished implementing and testing the shell, it’s time to create the shell package and install it in your CloudShell production environment. Note that you can skip this stage altogether if you developed your shell in the production environment.
 
