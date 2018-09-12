@@ -66,16 +66,16 @@ Do the following in Resource Manager Client.
 
 1. Import the new data model. 
     1. In the **Resource Families** explorer, right-click **Resource Families** and selct **Import**.
-    2. In the driver package's *datamodel* folder, select the *<driver0name>_ResourceConfiguration.xml* file and click **Open**.
+    2. In the driver package's *datamodel* folder, select the *ResourceConfiguration.xml* file (for example *shellname_ResourceConfiguration.xml*) and click **Open**.
 2. Create an L1 resource. 
     1. In **Resource Explorer**, right click **Root** and create a new resource.
     2. Give it a **Name**, and the device's **Address**. 
     3. Select the L1 Switch **Family** and make sure the correct **Model** and **Driver** are selected.
     4. Click **OK**.
     
-3. <a href="http://help.quali.com/Online%20Help/9.0/Portal/Content/Admn/Cnct-Ctrl-L1-Swch.htm" target="_blank">Follow this guide</a> to set the timeout period (for L1 shell drivers in CloudShell), autoload and configure your L1 resource's physical connections
+3. <a href="http://help.quali.com/Online%20Help/9.0/Portal/Content/Admn/Cnct-Ctrl-L1-Swch.htm" target="_blank">Follow this guide</a> to set the timeout period (for L1 shell drivers in CloudShell), autoload and configure your L1 resource's physical connections.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Autoload and any other commands executed on the L1 resource are logged at *~\QualiSystems\CloudShell\Server\Logs*.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Autoload and any other commands executed on the L1 resource are logged at *~\QualiSystems\CloudShell\Server\Logs*.
 
 4. After validating Autoload, you can validate the mapping functions either in Resource Manager Client (in the L1 resource's **Settings>Mappings** page, or in CloudShell Portal, by <a href="http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Rsc-Cnct/Phys-Ntwrk-Crt.htm" target="_blank">creating a blueprint</a> with 2 resources and a route, then reserving this blueprint and connecting the route.
 <a name="BuildInstallDriver"></a>
