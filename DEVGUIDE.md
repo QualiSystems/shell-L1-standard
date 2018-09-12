@@ -1,14 +1,14 @@
-# Layer 1 Driver Devguide
-This guide is a short review of the Python Layer 1 (L1) driver. 
+# Layer 1 Switch Shell Devguide
+This guide is a short review of the Python Layer 1 (L1) shell. 
 
-## L1 Driver Description
-L1 driver is provided as a self executable application which runs by CloudShell.  
+## L1 Shell Description
+The L1 Switch shell is provided as a self executable application which runs by CloudShell.  
 It listens to the specified port and waits for a connection from the CloudShell. 
 CloudShell communicates with the driver using XML commands. 
-Driver converts command data  and calls specific methods of the DriverCommands class, which are associated with the command name.
+The shell converts command data  and calls specific methods of the DriverCommands class, which are associated with the command name.
 
 
-To learn how to both use the driver and generate a new driver template see [README](https://github.com/QualiSystems/shell-L1-standard/blob/dev/README.md)
+To learn how to create a new shell from the Layer 1 Switch Shell template and use it in CloudShell, see [README](https://github.com/QualiSystems/shell-L1-standard/blob/dev/README.md)
 
 This guide explains how to implement the DriverCommands class and provides detailed examples for reference.
 
@@ -58,7 +58,7 @@ Each command tuple has a Login command at the beginning.
 5. [CommandExecutor](https://github.com/QualiSystems/cloudshell-L1-networking-core/blob/refactoring/cloudshell/layer_one/core/command_executor.py) extracts the command's name and attributes for each [CommandRequest](https://github.com/QualiSystems/cloudshell-L1-networking-core/blob/refactoring/cloudshell/layer_one/core/request/command_request.py) instance, calls the DriverCommands class method defined for this command name, and builds an [CommandResponse](https://github.com/QualiSystems/cloudshell-L1-networking-core/blob/refactoring/cloudshell/layer_one/core/response/command_response.py) instance, in order to generate a response.
 6. [CommandResponse](https://github.com/QualiSystems/cloudshell-L1-networking-core/blob/refactoring/cloudshell/layer_one/core/response/command_response.py) has the *response_info* attribute. The [ResponseInfo](https://github.com/QualiSystems/cloudshell-L1-networking-core/blob/refactoring/cloudshell/layer_one/core/response/response_info.py) instance can be returned from the methods included in the DriverCommands class.
 
-### Driver commands
+### Shell commands
 
 #### Login
 Opens a new session to the device. Login is called before each command tuple.
