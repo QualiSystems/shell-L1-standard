@@ -11,15 +11,15 @@ An easy way to get a CMD prompt as SYSTEM is to grab [PSEXEC](https://docs.micro
 2. Open an elevated CMD prompt as an administrator.
 3. Navigate to the folder where you unzipped PSEXEC.EXE
 4. Run:
-```cmd
-     PSEXEC -i -s -d CMD
-```
+    ```cmd
+         PSEXEC -i -s -d CMD
+    ```
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You will have a new CMD prompt open, as SYSTEM.
 
 6. Run PyCharm in the opened CMD:
-```cmd
-C:\Program Files (x86)\JetBrains\PyCharm Community Edition 2016.1.4\bin\pycharm.exe
-```
+    ```cmd
+    C:\Program Files (x86)\JetBrains\PyCharm Community Edition 2016.1.4\bin\pycharm.exe
+    ```
 
 ## Open the shell as a Project in PyCharm and configure the interpreter 
 1. Click **Open** and select the shell's root folder. For example, *C:\Program Files (x86)\QualiSystems\CloudShell\Server\Drivers\cloudshell-L1-driver_example*.
@@ -29,9 +29,9 @@ C:\Program Files (x86)\JetBrains\PyCharm Community Edition 2016.1.4\bin\pycharm.
 ## Run the shell in debug mode
 1. Edit the shell's **Runtime Configuration** - *C:\Program Files (x86)\QualiSystems\CloudShell\Server\Drivers\cloudshell-L1-driver_example\driver_example_RuntimeConfig.yml*
 2. Specify *DEBUG_ENABLED* option to *TRUE*
-```yaml
-DEBUG_ENABLED: TRUE
-```
+    ```yaml
+    DEBUG_ENABLED: TRUE
+    ```
 3. Kill the shell's python process. Find the PID (process id) of the shell's driver process in the commands log and kill it in Task Manager.
 
 ## Attach PyCharm's debugger to the driver process
