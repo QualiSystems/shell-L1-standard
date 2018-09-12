@@ -71,13 +71,13 @@ Do the following in Resource Manager Client.
 
 ### Building and installing the driver's package on CloudShell:**
 
-Once you’ve finished implementing and testing the driver, it’s time to create the shell package and install it in your CloudShell production environment. Note that you can skip this section altogether if you developed your driver in the production environment.
+Once you’ve finished implementing and testing the driver, it’s time to create the driver package and install it in your CloudShell production environment. Note that you can skip this section altogether if you developed your driver in the production environment.
 
 1. From the *\Drivers* folder, run the following command:
     
     `Scripts\build_driver.exe`
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The L1 shell package is created in the shell project's *dist* folder, bearing the shell's name and version.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The L1 driver package is created in the driver project's *dist* folder, bearing the driver's name and version.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For example: *dist\cloudshell-L1-DriverName-1.0.1.zip*
 
