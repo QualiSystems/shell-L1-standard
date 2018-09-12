@@ -1,46 +1,88 @@
 # Shell L1 Driver Standard
 
-**Create a new driver and install the driver's environment:**
+In this guide, we will guide you on how to create your L1 driver, implement its automation commands, test and use it in CloudShell.
 
-1. Start a new project with [shellfoundry](https://github.com/QualiSystems/shellfoundry), better to do that in the *Drivers* folder of QualiServer installation, usually this is *C:\Program Files (x86)\QualiSystems\CloudShell\Server\Drivers*:
-```bash
-shellfoundry new DriverName --template layer-1-switch
-```
-2. Install the driver's environment and dependencies from requirements.txt. Enter to the driver's folder and run script *install_driver.bat*
-```bash
-install_driver.bat
-```
-You can specify the driver's python interpreter by adding it as a first argument to the script.
-```bash
-install_driver.bat "c:\Python27\python.exe"
-```
+In this guide:
 
-**Implementation:**
+* [Creating a new driver and installing the driver's environment](#CreateNewDriver)
+* [Implementing the driver in CloudShell](#ImplementDriver)
+* [Testing the driver in CloudShell](#TestNewDriver)
+* [Building and installing the driver's package on CloudShell](#BuildInstallDriver)
 
-1. Implement methods of the DriverCommands class in <project_slug>/driver_commands.py. Follow the [DEVGUIDE](https://github.com/QualiSystems/shell-L1-standard/blob/dev/DEVGUIDE.md) and docstrings with description, as an example of an L1 driver with CLI usage you can reffer to the [cloudshel-L1-mrv](https://github.com/QualiSystems/cloudshell-L1-mrv) project.
-To debug the driver use the [DEBUGGING GUIDE](https://github.com/QualiSystems/shell-L1-template/blob/dev/DEBUGGING.md).
+<a name="CreateNewDriver"></a>
 
-2. Update the driver version in version.txt
+### Creating a new driver and installing the driver's environment
 
-**Test in CloudShell:**
-1. [Follow this guide](http://help.quali.com/Online%20Help/8.3/Portal/Content/Admn/Cnct-Ctrl-L1-Swch.htm) to import the new datamodel, create a resource, set the timeout period, auto load it and configure its physical connections
-  * When you execute the auto load (or any other command later), the log files will get created under the Server\\Logs folder
-2. After validating the auto load, you can validate the mapping functions either from Resource Manager or in the CloudShell Portal, [build a blueprint](http://help.quali.com/Online%20Help/8.3/Portal/Content/CSP/LAB-MNG/Rsc-Cnct/Phys-Ntwrk-Crt.htm) with 2 resources and a route, then reserve this blueprint and connect the route.
+1. Start a new project with <a href="https://github.com/QualiSystems/shellfoundry" target="_blank">shellfoundry</a>. We recommend to do that in CloudShell's *Drivers* folder (usually at *C:\Program Files (x86)\QualiSystems\CloudShell\Server\Drivers* on the Quali Server machine):
 
+    `shellfoundry new DriverName --template layer-1-switch`
 
-**Build the driver's package:**
-
-* In the driver's folder run command *build_driver*. It will create a zip package *dist\cloudshell-L1-DriverName-1.0.1.zip*
-    
-```bash
-    Scripts\build_driver.exe
-```
+2. To install the driver's environment and dependencies defined in the driver's *requirements.txt* file, in command-line, navigate to the *~\QualiSystems\CloudShell\Server* folder and run the appropriate command:
  
+    * If you're using Quali's default python interpreter (at *~\QualiSystems\CloudShell\Server\python*), run the following:
+
+        `install_driver.bat`
+
+    * If you want to use a different python interpreter, you will need to  and then running the command:
+        1. Install the *virtualenv* package by running:
+        
+            `<interpreter-path>\python.exe -m pip install virtualenv` using your python interpreter
+        
+        2. And then run:
+        
+            `install_driver.bat "<interpreter-path>\python.exe"`
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The driver is installed.
+
+3. To verify, return to the *\Drivers* folder at *~\QualiSystems\CloudShell\Server\Drivers*, and run the new driver exe file.
+<a name="ImplementDriver"></a>
+
+### Implementing the driver in CloudShell
+
+Now that you have a new driver, it is time to implement the driver's commands. Note that at this point, the L1 driver includes the command structure but no working commands.
+
+1. Implement methods of the *DriverCommands* class in *<project_slug>/driver_commands.py*. 
+
+    * Follow the <a href="https://github.com/QualiSystems/shell-L1-standard/blob/dev/DEVGUIDE.md" target="_blank">DEVGUIDE</a> and docstrings with description, as an example of an L1 driver with CLI usage you can refer to the <a href="https://github.com/QualiSystems/cloudshell-L1-mrv" target="_blank">cloudshel-L1-mrv</a> project.
+    * To debug the driver, use the <a href="https://github.com/QualiSystems/shell-L1-template/blob/dev/DEBUGGING.md" target="_blank">DEBUGGING GUIDE</a>.
+
+2. Update the driver's version in the *version.txt* file.
+<a name="TestNewDriver"></a>
+
+### Testing the driver in CloudShell
+
+Do the following in Resource Manager Client.
+
+1. Import the new data model. 
+    1. In the **Resource Families** explorer, right-click **Resource Families** and selct **Import**.
+    2. In the driver package's *datamodel* folder, select the *<driver0name>_ResourceConfiguration.xml* file and click **Open**.
+2. Create an L1 resource. 
+    1. In **Resource Explorer**, right click **Root** and create a new resource.
+    2. Give it a **Name**, and the device's **Address**. 
+    3. Select the L1 Switch **Family** and make sure the correct **Model** and **Driver** are selected.
+    4. Click **OK**.
     
-**Install the driver's package:**
-* Extract the driver's package to the Drivers folder *C:\\Program Files (x86)\\QualiSystems\\CloudShell\\Server\\Drivers*
-* In the driver's folder *C:\\Program Files (x86)\\QualiSystems\\CloudShell\\Server\\Drivers\\cloudshell-L1-DriverName* run *install_driver.bat*
-```bash
-    install_driver.bat
-```
+3. <a href="http://help.quali.com/Online%20Help/9.0/Portal/Content/Admn/Cnct-Ctrl-L1-Swch.htm" target="_blank">Follow this guide</a> to set the timeout period (for L1 drivers in CloudShell), autoload and configure your L1 resource's physical connections
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Autoload and any other commands executed on the L1 resource are logged at *~\QualiSystems\CloudShell\Server\Logs*.
+
+4. After validating Autoload, you can validate the mapping functions either in Resource Manager Client (in the L1 resource's **Settings>Mappings** page, or in CloudShell Portal, by <a href="http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Rsc-Cnct/Phys-Ntwrk-Crt.htm" target="_blank">creating a blueprint</a> with 2 resources and a route, then reserving this blueprint and connecting the route.
+<a name="BuildInstallDriver"></a>
+
+### Building and installing the driver's package on CloudShell:**
+
+Once you’ve finished implementing and testing the driver, it’s time to create the shell package and install it in your CloudShell production environment. Note that you can skip this section altogether if you developed your driver in the production environment.
+
+1. From the *\Drivers* folder, run the following command:
+    
+    `Scripts\build_driver.exe`
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The L1 shell package is created in the shell project's *dist* folder, bearing the shell's name and version.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For example: *dist\cloudshell-L1-DriverName-1.0.1.zip*
+
+2. Extract the driver's package to the *\Drivers* folder *C:\\Program Files (x86)\\QualiSystems\\CloudShell\\Server\\Drivers*
+3. Navigate to the extracted folder and install the driver, as explained in [Creating a new driver and installing the driver's environment](#CreateNewDriver)
+4. Follow the steps in [Testing the driver in CloudShell](#TestNewDriver) to install the driver on CloudShell.
+
 
