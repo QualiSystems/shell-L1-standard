@@ -37,6 +37,17 @@ In this guide:
 3. To verify, return to the *\Drivers* folder at *~\QualiSystems\CloudShell\Server\Drivers*, and run the new shell exe file.
 <a name="ImplementDriver"></a>
 
+A command-line output similar to this should be displayed:
+
+```
+Starting driver shellname
+""C:\Program Files (x86)\QualiSystems\CloudShell\Server\Drivers\cloudshell-L1-sh
+ellname\Scripts\python.exe" "C:\Program Files (x86)\QualiSystems\CloudShell\Serv
+er\Drivers\cloudshell-L1-shellname\main.py" 4000 "C:\Program Files (x86)\QualiSy
+stems\CloudShell\Server\Drivers\..\Logs""
+Listen address 0.0.0.0:4000
+```
+
 ### Implementing the shell in CloudShell
 
 Now that you have a new shell, it is time to implement the shell's commands. Note that at this point, the L1 shell includes the command structure but no working commands.
