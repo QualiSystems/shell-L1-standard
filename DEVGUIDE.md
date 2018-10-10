@@ -58,6 +58,28 @@ Each command tuple has a Login command at the beginning.
 5. [CommandExecutor](https://github.com/QualiSystems/cloudshell-L1-networking-core/blob/refactoring/cloudshell/layer_one/core/command_executor.py) extracts the command's name and attributes for each [CommandRequest](https://github.com/QualiSystems/cloudshell-L1-networking-core/blob/refactoring/cloudshell/layer_one/core/request/command_request.py) instance, calls the DriverCommands class method defined for this command name, and builds an [CommandResponse](https://github.com/QualiSystems/cloudshell-L1-networking-core/blob/refactoring/cloudshell/layer_one/core/response/command_response.py) instance, in order to generate a response.
 6. [CommandResponse](https://github.com/QualiSystems/cloudshell-L1-networking-core/blob/refactoring/cloudshell/layer_one/core/response/command_response.py) has the *response_info* attribute. The [ResponseInfo](https://github.com/QualiSystems/cloudshell-L1-networking-core/blob/refactoring/cloudshell/layer_one/core/response/response_info.py) instance can be returned from the methods included in the DriverCommands class.
 
+### Cloudshell configuration
+- Timeout configuration for a specific driver command, value in milliseconds. Add needed key/value to *customer.config*.
+```xml
+    <add key="Lag_Timeout" value="10000" />
+    <add key="DefaultCommand_Timeout" value="900000" />
+    <add key="MapClear_Timeout" value="900000" />
+    <add key="MapClearTo_Timeout" value="900000" />
+    <add key="MapBidi_Timeout" value="900000" />
+    <add key="MapUni_Timeout" value="900000" />
+    <add key="SetAttributeValue_Timeout" value="900000" />
+    <add key="GetAttributeValue_Timeout" value="900000" />
+    <add key="GetResourceDescription_Timeout" value="6000000" />
+    <add key="Login_Timeout" value="10000" />
+    <add key="Logout_Timeout" value="10000" />
+    <add key="GetStateId_Timeout" value="10000" />
+    <add key="SetStateId_Timeout" value="60000" />
+```
+- Timeout configuration for waiting the driver up. Add needed key/value to *customer.config*.
+```xml
+    <add key="L1DriverProcessStartupTime" value="2"/>
+```
+
 ### Shell commands
 
 #### Login
