@@ -60,20 +60,19 @@ The L1 switch families and models are listed in the following table:
 
 |Family|Model|Description|
 |:---|:---|:---|
-|L1 Switch|||
-|L1 Switch Blade|||
-|L1 Switch Port|||
+|L1 Switch|{{cookiecutter.model_name}} Chassis|L1 Switch Chassis|
+|L1 Switch Blade|Generic L1 Module|Generic L1 Module|
+|L1 Switch Port|Generic L1 Port|Generic L1 Port|
 
 #### **{{cookiecutter.project_name}} Attributes**
 
-The {{cookiecutter.project_name}} attribute names and types are listed in the following table:
+The {{cookiecutter.model_name}} Chassis attribute names and types are listed in the following table:
 
 |Attribute|Type|Description|
 |:---|:---|:---|
-||||
-||||
-||||
-||||
+|Model Name|String|Model name|
+|Serial Number|String|Serial number|
+|OS Version|String|OS version|
 
 The Generic L1 Module attribute names and types are listed in the following table:
 
@@ -212,4 +211,4 @@ To connect with Quali users and experts from around the world, ask questions and
 
 ### What's New
 
-For release updates, see the shell's [GitHub releases page](https://github.com/QualiSystems/[Shell Name]/releases).
+For release updates, see the shell's [GitHub releases page](https://github.com/QualiSystems/cloudshell-L1-{{cookiecutter.project_slug}}/releases).
