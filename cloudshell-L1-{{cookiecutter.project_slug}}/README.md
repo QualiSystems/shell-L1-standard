@@ -30,14 +30,14 @@ L1 switch shells allow CloudShell to manage networking connectivity between phys
 For additional information, see the [L1 Switches](http://help.quali.com/Online%20Help/9.0/Portal/Content/Admn/Cnct-Ctrl-L1-Swch.htm?Highlight=L1%20switch) online help topic.
 
 ### **{{cookiecutter.shell_name}}**
-**{{cookiecutter.shell_name}}** shell provides you with the capability to communicate with network topology managed by the {{cookiecutter.project_name}}.
+**{{cookiecutter.shell_name}} provides you with the capability to communicate with network topology managed by the {{cookiecutter.model_name}}.
 
 The shell allows CloudShell users to interact with the device, for example, create and modify route mappings, get device information, and more.
 
-For more information on the **{{cookiecutter.project_name}}**, see the official **[Device Manufacturer]** product documentation.
+For more information on the **{{cookiecutter.model_name}}**, see the official **[Device Manufacturer]** product documentation.
 
 ### Standard version
-The **{{cookiecutter.project_name}}** shell is based on the [**Layer 1 Switch Shell Standard**](https://github.com/QualiSystems/shell-L1-template).
+The {{cookiecutter.shell_name}} is based on the [**Layer 1 Switch Shell Standard**](https://github.com/QualiSystems/shell-L1-template).
 
 ### Supported OS
 ▪ [OS Name]
@@ -54,7 +54,7 @@ Release: **{{cookiecutter.shell_name}}**
 
 The shell's data model includes all shell metadata, families, and attributes.
 
-#### **{{cookiecutter.project_name}} Families and Models**
+#### **{{cookiecutter.model_name}} Families and Models**
 
 The L1 switch families and models are listed in the following table:
 
@@ -64,7 +64,7 @@ The L1 switch families and models are listed in the following table:
 |L1 Switch Blade|Generic L1 Module|Generic L1 Module|
 |L1 Switch Port|Generic L1 Port|Generic L1 Port|
 
-#### **{{cookiecutter.project_name}} Attributes**
+#### **{{cookiecutter.model_name}} Attributes**
 
 The {{cookiecutter.model_name}} Chassis attribute names and types are listed in the following table:
 
@@ -112,14 +112,14 @@ This section describes the automation (drivers) associated with the data model. 
 **Note:** You can only activate a TAP connection after activating a parent MapUni/MapBidi connection. 
 
 # Downloading the Shell
-The **{{cookiecutter.project_name}}** shell is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
+The **{{cookiecutter.model_name}}** shell is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
 
 The shell comprises:
 
 |File name|Description|
 |:---|:---|
-|cloudshell-L1-{{cookiecutter.project_slug}}-1.0.0.zip|{{cookiecutter.project_name}} shell package|
-|install_driver.bat|{{cookiecutter.project_name}} shell installation script|
+|cloudshell-L1-{{cookiecutter.project_slug}}-1.0.0.zip|{{cookiecutter.shell_name}} package|
+|install_driver.bat|{{cookiecutter.shell_name}} installation script|
 |{{cookiecutter.project_slug}}_runtime_config.yml|{{cookiecutter.shell_name}} configuration file|
 |{{cookiecutter.project_slug}}_ResourceConfiguration.xml|XML file containing the resource structure, attributes and capabilities of the L1 switches of the same vendor|
 
