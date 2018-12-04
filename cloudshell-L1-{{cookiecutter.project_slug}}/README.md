@@ -30,7 +30,7 @@ L1 switch shells allow CloudShell to manage networking connectivity between phys
 For additional information, see the [L1 Switches](http://help.quali.com/Online%20Help/9.0/Portal/Content/Admn/Cnct-Ctrl-L1-Swch.htm?Highlight=L1%20switch) online help topic.
 
 ### **{{cookiecutter.shell_name}}**
-**{{cookiecutter.shell_name}} provides you with the capability to communicate with network topology managed by the {{cookiecutter.model_name}}.
+{{cookiecutter.shell_name}} provides you with the capability to communicate with network topology managed by the {{cookiecutter.model_name}}.
 
 The shell allows CloudShell users to interact with the device, for example, create and modify route mappings, get device information, and more.
 
@@ -118,7 +118,7 @@ The shell comprises:
 
 |File name|Description|
 |:---|:---|
-|cloudshell-L1-{{cookiecutter.project_slug}}-1.0.0.zip|{{cookiecutter.shell_name}} package|
+|cloudshell-L1-{{cookiecutter.project_slug}}-x.x.x.zip|{{cookiecutter.shell_name}} package|
 |install_driver.bat|{{cookiecutter.shell_name}} installation script|
 |{{cookiecutter.project_slug}}_runtime_config.yml|{{cookiecutter.shell_name}} configuration file|
 |{{cookiecutter.project_slug}}_ResourceConfiguration.xml|XML file containing the resource structure, attributes and capabilities of the L1 switches of the same vendor|
