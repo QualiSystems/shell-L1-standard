@@ -79,6 +79,10 @@ Each command tuple has a Login command at the beginning.
 ```xml
     <add key="L1DriverProcessStartupTime" value="2"/>
 ```
+- Protect to create mappings for ports with different Protocol Types. Protocol Type "Transparent"  allowed to map with any other type.
+```xml
+    <add key="EnableRouteConfiguration" value="True"/>
+```
 
 ### Shell commands
 
