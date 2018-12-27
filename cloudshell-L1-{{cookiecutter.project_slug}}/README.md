@@ -30,7 +30,7 @@ L1 switch shells allow CloudShell to manage networking connectivity between phys
 For additional information, see the [L1 Switches](http://help.quali.com/Online%20Help/9.0/Portal/Content/Admn/Cnct-Ctrl-L1-Swch.htm?Highlight=L1%20switch) online help topic.
 
 ### **{{cookiecutter.shell_name}}**
-{{cookiecutter.shell_name}} provides you with the capability to communicate with network topology managed by the {{cookiecutter.model_name}}.
+{{cookiecutter.shell_name}} provides you with the capability to communicate with network topology managed by the {{cookiecutter.model_name}} switch.
 
 The shell allows CloudShell users to interact with the device, for example, create and modify route mappings, get device information, and more.
 
@@ -46,7 +46,7 @@ The {{cookiecutter.shell_name}} is based on the [**Layer 1 Switch Shell Standard
 
 Release: **{{cookiecutter.shell_name}}**
 
-▪ CloudShell version: {{cookiecutter.cs_server_version}}
+▪ CloudShell version: {{cookiecutter.cs_server_version}} and above
 
 ▪ Other: [version x.x]
 
@@ -101,7 +101,7 @@ This section describes the automation (drivers) associated with the data model. 
 |Command|Description|
 |:-----|:-----|
 |Autoload|Discovers and creates the internal resources of the root resource (for example, switch cards and ports).|
-|MapBidi|Creates a bi-directional mapping between between two ports.|
+|MapBidi|Creates a bi-directional mapping between two ports.|
 |MapUni|Creates a uni-directional mapping between two ports.|
 |MapClear|Clears any connection ending in this port.|
 |MapClearTo|Clears a uni-directional connection between two ports.|
@@ -112,26 +112,26 @@ This section describes the automation (drivers) associated with the data model. 
 **Note:** You can only activate a TAP connection after activating a parent MapUni/MapBidi connection. 
 
 # Downloading the Shell
-The **{{cookiecutter.model_name}}** shell is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
+The **{{cookiecutter.model_name}}** Shell is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
 
 The shell comprises:
 
 |File name|Description|
 |:---|:---|
-|cloudshell-L1-{{cookiecutter.project_slug}}-x.x.x.zip|{{cookiecutter.shell_name}} package|
-|install_driver.bat|{{cookiecutter.shell_name}} installation script|
-|{{cookiecutter.project_slug}}_runtime_config.yml|{{cookiecutter.shell_name}} configuration file|
+|cloudshell-L1-{{cookiecutter.project_slug}}-x.x.x.zip|{{cookiecutter.model_name}} shell package|
+|install_driver.bat|{{cookiecutter.model_name}} shell installation script|
+|{{cookiecutter.project_slug}}_runtime_config.yml|{{cookiecutter.model_name}} shell configuration file|
 |{{cookiecutter.project_slug}}_ResourceConfiguration.xml|XML file containing the resource structure, attributes and capabilities of the L1 switches of the same vendor|
 
 # Importing and Configuring the Shell
-This section describes how to import the **{{cookiecutter.shell_name}}** and configure and modify the shell’s devices.
+This section describes how to import the L1 Shell and configure and modify the shell’s devices.
 
 ### Importing and configuring the shell in CloudShell
 
 **To import and configure the shell in CloudShell:**
   1. Make sure you have the shell’s zip package. If not, download the shell from the [Quali Community's Integrations](https://community.quali.com/integrations) page.
   
-  2. Extract the *{{cookiecutter.project_name}} shell package zip* package to the following location on the Quali Server machine: 
+  2. Extract the *{{cookiecutter.model_name}} shell zip* package to the following location on the Quali Server machine: 
   *C:\Program Files (x86)\QualiSystems\CloudShell\Server\Drivers*
   
   3. Run the *C:\Program Files (x86)\QualiSystems\CloudShell\Server\Drivers\cloudshell-L1-{{cookiecutter.project_slug}}\install_driver.bat* file.
