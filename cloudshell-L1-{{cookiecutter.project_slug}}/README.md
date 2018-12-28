@@ -30,14 +30,14 @@ L1 switch shells allow CloudShell to manage networking connectivity between phys
 For additional information, see the [L1 Switches](http://help.quali.com/Online%20Help/9.0/Portal/Content/Admn/Cnct-Ctrl-L1-Swch.htm?Highlight=L1%20switch) online help topic.
 
 ### **{{cookiecutter.shell_name}}**
-{{cookiecutter.shell_name}} provides you with the capability to communicate with network topology managed by the {{cookiecutter.model_name}} switch.
+{{cookiecutter.model_name}} shell provides you with the capability to communicate with network topology managed by the {{cookiecutter.model_name}} switch.
 
 The shell allows CloudShell users to interact with the device, for example, create and modify route mappings, get device information, and more.
 
 For more information on the **{{cookiecutter.model_name}}**, see the official **[Device Manufacturer]** product documentation.
 
 ### Standard version
-The {{cookiecutter.shell_name}} is based on the [**Layer 1 Switch Shell Standard**](https://github.com/QualiSystems/shell-L1-template).
+The {{cookiecutter.model_name}} shell is based on the [**Layer 1 Switch Shell Standard**](https://github.com/QualiSystems/shell-L1-template).
 
 ### Supported OS
 ▪ [OS Name]
@@ -86,14 +86,14 @@ The Generic L1 Port attribute names and types are listed in the following table:
 |Attribute|Type|Default|Description|
 |:---|:---|:---|:---|
 |Auto Negotiation|Boolean|True|Port auto negotiation|
-|Duplex|Lookup|Full|Port Duplex|
+|Duplex|Lookup|Full|Port duplex|
 |Port Speed|String||Port speed|
 |Protocol|Lookup|Transparent|Port protocol|
 |Protocol Type Value|String ||Port protocol type value|
 |Protocol Value|String ||Port protocol value|
-|Rx Power (dBm)|String|0|Optical Port RX signal strength|
-|Tx Power (dBm)|String|0|Optical Port TX signal strength|
-|Wavelength|String|0|Optical Port Wavelength|
+|Rx Power (dBm)|String|0|Optical port Rx signal strength|
+|Tx Power (dBm)|String|0|Optical port Tx signal strength|
+|Wavelength|String|0|Optical port wavelength|
 
 ### Automation
 This section describes the automation (drivers) associated with the data model. The shell’s driver is provided as part of the shell package. There are two types of automation processes, Autoload and Resource.  Autoload is executed when creating the resource in the **Inventory** dashboard, while resource commands are run in the sandbox.
@@ -112,7 +112,7 @@ This section describes the automation (drivers) associated with the data model. 
 **Note:** You can only activate a TAP connection after activating a parent MapUni/MapBidi connection. 
 
 # Downloading the Shell
-The **{{cookiecutter.model_name}}** Shell is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
+The **{{cookiecutter.model_name}}** shell is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
 
 The shell comprises:
 
@@ -124,7 +124,7 @@ The shell comprises:
 |{{cookiecutter.project_slug}}_ResourceConfiguration.xml|XML file containing the resource structure, attributes and capabilities of the L1 switches of the same vendor|
 
 # Importing and Configuring the Shell
-This section describes how to import the L1 Shell and configure and modify the shell’s devices.
+This section describes how to import the L1 shell and configure and modify the shell’s devices.
 
 ### Importing and configuring the shell in CloudShell
 
