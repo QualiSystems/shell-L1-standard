@@ -46,7 +46,7 @@ The {{cookiecutter.model_name}} L1 shell is based on the [**Layer 1 Switch Shell
 
 Release: **{{cookiecutter.shell_name}}**
 
-▪ CloudShell version: {{cookiecutter.cs_server_version}} and above
+▪ CloudShell version: {{cookiecutter.server_version}} and above
 
 ▪ Other: [version x.x]
 
