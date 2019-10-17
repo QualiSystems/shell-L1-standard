@@ -251,6 +251,6 @@
     </ResourceFamilies>
     <DriverDescriptors>
         <DriverDescriptor Name="{{cookiecutter.model_name.upper()}}" DriverType="L1SwitchTclDriver"
-                          CustomParams="{{cookiecutter.project_slug}}.exe"/>
+                          CustomParams="{{cookiecutter.project_name.replace(' ', '-')}}.exe"/>
     </DriverDescriptors>
 </ResourceManagementExportImport>
