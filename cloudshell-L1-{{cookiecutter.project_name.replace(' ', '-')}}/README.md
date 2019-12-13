@@ -34,7 +34,7 @@ The {{cookiecutter.model_name}} L1 shell provides you with the capability to com
 
 The shell allows CloudShell users to interact with the device, for example, create and modify route mappings, get device information, and more.
 
-For more information on the **{{cookiecutter.model_name}}**, see the official **[Device Manufacturer]** product documentation.
+For more information on the **{{cookiecutter.model_name}}**, see the official product documentation.
 
 ### Standard version
 The {{cookiecutter.model_name}} L1 shell is based on the [**Layer 1 Switch Shell Standard**](https://github.com/QualiSystems/shell-L1-template).
