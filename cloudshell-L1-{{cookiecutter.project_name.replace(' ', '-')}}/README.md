@@ -135,25 +135,29 @@ This section describes how to import the L1 shell and configure and modify the s
   *C:\Program Files (x86)\QualiSystems\CloudShell\Server\Drivers*
   
   3. Run the *C:\Program Files (x86)\QualiSystems\CloudShell\Server\Drivers\cloudshell-L1-{{cookiecutter.project_slug}}\install_driver.bat* file.
-  
-  4. Import the new data model.
+     
+  4. Make sure the *C:\Program Files (x86)\QualiSystems\CloudShell\Server\Drivers\{{cookiecutter.project_slug}}.exe* file is unblocked.
+      1. Right-click the file and select **Properties**.
+      2. If you see an **Unblock** option, select it and click **OK**.
+     
+  5. Import the new data model.
       1. In **Resource Manager Client>Admin**, right-click **Resource Families** and select **Import**.
       2. Select the *C:\Program Files (x86)\QualiSystems\CloudShell\Server\Drivers\cloudshell-L1-{{cookiecutter.project_slug}}\datamodel\{{cookiecutter.project_slug}}_ResourceConfiguration.xml* file.
       3. Click **Open**.
 	
-  5. Create an L1 resource.
+  6. Create an L1 resource.
       1. In **Resource Explorer**, right-click **Root** and select **New>Resource**.
       2. Enter the **Name** and **Address**.
       3. Select the **L1 Switch** family.
       4. Ensure that the correct **Model** {{cookiecutter.model_name}} Chassis and **Driver** {{cookiecutter.model_name.upper()}} are selected.
       5. Click **OK**.
 	
-  6. Auto Load the new resource.
+  7. Auto Load the new resource.
       1. In **Resource Explorer**, right-click the new resource and select **Configuration**.
       2. In the **Internal Resources** pane, right-click the switch and select **Exclude**. 
       3. Click the **Auto Load** button at the bottom of the **Configuration** tab.
 	
-  7. Define the resource connections on the L1 switch.
+  8. Define the resource connections on the L1 switch.
       1. Right-click the resource and select **Configuration>Connections**.
       2. Connect a resource's port to a different port in the switch resource by clicking each port's **Connected To** button, selecting the resource's **Family** and **Resource**, and selecting the port to connect.
       3. Click **OK** in the **Resource connection** dialog box.
