@@ -34,7 +34,7 @@ The {{cookiecutter.model_name}} L1 shell provides you with the capability to com
 
 The shell allows CloudShell users to interact with the device, for example, create and modify route mappings, get device information, and more.
 
-For more information on the **{{cookiecutter.model_name}}**, see the official **[Device Manufacturer]** product documentation.
+For more information on the **{{cookiecutter.model_name}}**, see the official product documentation.
 
 ### Standard version
 The {{cookiecutter.model_name}} L1 shell is based on the [**Layer 1 Switch Shell Standard**](https://github.com/QualiSystems/shell-L1-template).
@@ -118,7 +118,7 @@ The shell comprises:
 
 |File name|Description|
 |:---|:---|
-|cloudshell-L1-{{cookiecutter.project_slug}}-x.x.x.zip|{{cookiecutter.model_name}} L1 shell package|
+|cloudshell-L1-{{cookiecutter.project_name.replace(' ', '-')}}-x.x.x.zip|{{cookiecutter.model_name}} L1 shell package|
 |install_driver.bat|{{cookiecutter.model_name}} L1 shell installation script|
 |{{cookiecutter.project_slug}}_runtime_config.yml|{{cookiecutter.model_name}} L1 shell configuration file|
 |{{cookiecutter.project_slug}}_ResourceConfiguration.xml|XML file containing the resource structure, attributes and capabilities of the L1 switches of the same vendor|
@@ -134,26 +134,30 @@ This section describes how to import the L1 shell and configure and modify the s
   2. Extract the *{{cookiecutter.model_name}} L1 shell zip* package to the following location on the Quali Server machine: 
   *C:\Program Files (x86)\QualiSystems\CloudShell\Server\Drivers*
   
-  3. Run the *C:\Program Files (x86)\QualiSystems\CloudShell\Server\Drivers\cloudshell-L1-{{cookiecutter.project_slug}}\install_driver.bat* file.
-  
-  4. Import the new data model.
+  3. Run the *C:\Program Files (x86)\QualiSystems\CloudShell\Server\Drivers\cloudshell-L1-{{cookiecutter.project_name.replace(' ', '-')}}\install_driver.bat* file.
+     
+  4. Make sure the *C:\Program Files (x86)\QualiSystems\CloudShell\Server\Drivers\{{cookiecutter.project_name.replace(' ', '-')}}.exe* file is unblocked.
+      1. Right-click the file and select **Properties**.
+      2. If you see an **Unblock** option, select it and click **OK**.
+     
+  5. Import the new data model.
       1. In **Resource Manager Client>Admin**, right-click **Resource Families** and select **Import**.
-      2. Select the *C:\Program Files (x86)\QualiSystems\CloudShell\Server\Drivers\cloudshell-L1-{{cookiecutter.project_slug}}\datamodel\{{cookiecutter.project_slug}}_ResourceConfiguration.xml* file.
+      2. Select the *C:\Program Files (x86)\QualiSystems\CloudShell\Server\Drivers\cloudshell-L1-{{cookiecutter.project_name.replace(' ', '-')}}\datamodel\{{cookiecutter.project_slug}}_ResourceConfiguration.xml* file.
       3. Click **Open**.
 	
-  5. Create an L1 resource.
+  6. Create an L1 resource.
       1. In **Resource Explorer**, right-click **Root** and select **New>Resource**.
       2. Enter the **Name** and **Address**.
       3. Select the **L1 Switch** family.
       4. Ensure that the correct **Model** {{cookiecutter.model_name}} Chassis and **Driver** {{cookiecutter.model_name.upper()}} are selected.
       5. Click **OK**.
 	
-  6. Auto Load the new resource.
+  7. Auto Load the new resource.
       1. In **Resource Explorer**, right-click the new resource and select **Configuration**.
       2. In the **Internal Resources** pane, right-click the switch and select **Exclude**. 
       3. Click the **Auto Load** button at the bottom of the **Configuration** tab.
 	
-  7. Define the resource connections on the L1 switch.
+  8. Define the resource connections on the L1 switch.
       1. Right-click the resource and select **Configuration>Connections**.
       2. Connect a resource's port to a different port in the switch resource by clicking each port's **Connected To** button, selecting the resource's **Family** and **Resource**, and selecting the port to connect.
       3. Click **OK** in the **Resource connection** dialog box.
@@ -163,7 +167,7 @@ This section describes how to import the L1 shell and configure and modify the s
 ### Offline installation of a shell
 Shell installation installs the required dependencies from the shell's zip package.
 
-The *install_driver.bat* script creates a virtual environment on the Quali Server machine under *C:\Program Files (x86)\QualiSystems\CloudShell\Server\Drivers\cloudshell-L1-{{cookiecutter.project_slug}}* and installs the required dependencies in this virtual environment from the extracted L1 shell folder (under *~cloudshell-L1-{{cookiecutter.project_slug}}\packages*).
+The *install_driver.bat* script creates a virtual environment on the Quali Server machine under *C:\Program Files (x86)\QualiSystems\CloudShell\Server\Drivers\cloudshell-L1-{{cookiecutter.project_name.replace(' ', '-')}}* and installs the required dependencies in this virtual environment from the extracted L1 shell folder (under *~cloudshell-L1-{{cookiecutter.project_name.replace(' ', '-')}}\packages*).
 
 # Updating Python Dependencies for Shells
 This section explains how to update your Python dependencies folder. This is required when you upgrade a shell that uses new/updated dependencies. It applies to both online and offline dependencies. 
@@ -185,7 +189,7 @@ L1 shells do not have separate Python dependencies files. All dependencies are i
 
 5. Copy the upgraded shell's datamodel file from:
 
-	*C:\Program Files (x86)\QualiSystems\CloudShell\Server\Drivers\cloudshell-L1-{{cookiecutter.project_slug}}\datamodel\{{cookiecutter.project_slug}}_ResourceConfiguration.xml*
+	*C:\Program Files (x86)\QualiSystems\CloudShell\Server\Drivers\cloudshell-L1-{{cookiecutter.project_name.replace(' ', '-')}}\datamodel\{{cookiecutter.project_slug}}_ResourceConfiguration.xml*
 	
 	to:
 	
@@ -211,4 +215,4 @@ To connect with Quali users and experts from around the world, ask questions and
 
 ### What's New
 
-For release updates, see the shell's [GitHub releases page](https://github.com/QualiSystems/cloudshell-L1-{{cookiecutter.project_slug}}/releases).
+For release updates, see the shell's [GitHub releases page](https://github.com/QualiSystems/cloudshell-L1-{{cookiecutter.project_name.replace(' ', '-')}}/releases).
