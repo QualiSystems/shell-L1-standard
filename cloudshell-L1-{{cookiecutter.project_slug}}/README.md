@@ -158,6 +158,8 @@ This section describes how to import the L1 shell and configure and modify the s
       2. Connect a resource's port to a different port in the switch resource by clicking each port's **Connected To** button, selecting the resource's **Family** and **Resource**, and selecting the port to connect.
       3. Click **OK** in the **Resource connection** dialog box.
       4. Save your changes.
+     
+*For more detailed information, see the [Import an L1 shell to CloudShell](https://help.quali.com/Online%20Help/0.0/Portal/Content/Admn/Cnct-Ctrl-L1-Swch.htm?Highlight=L1#Importin) online help topic.*
 
 
 ### Offline installation of a shell
